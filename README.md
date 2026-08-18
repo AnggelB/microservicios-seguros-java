@@ -4,7 +4,7 @@
 ## Arquitectura y Lógica de Implementación
 ### El flujo del sistema se divide en dos microservicios comunicados a través de una red interna:
 
-1. **Microservicio de Consulta (mso-es-consulta-seguros-v1):\*\* Actúa como proveedor de información. Expone un endpoint `GET /seguros/{id}` que retorna en formato JSON los datos del seguro, incluyendo sus reglas de negocio (edad mínima, edad máxima y géneros permitidos).
+1. **Microservicio de Consulta (mso-es-consulta-seguros-v1):** Actúa como proveedor de información. Expone un endpoint `GET /seguros/{id}` que retorna en formato JSON los datos del seguro, incluyendo sus reglas de negocio (edad mínima, edad máxima y géneros permitidos).
 
 2. **Microservicio de Validación (mso-ts-validaciones-v1):** Actúa como el motor de reglas de negocio.
 + **Recepción de Datos:** Expone un endpoint `POST /validaciones` que recibe el ID del seguro deseado y los datos personales del cliente (incluyendo fecha de nacimiento).
